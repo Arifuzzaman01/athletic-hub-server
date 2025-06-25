@@ -16,7 +16,7 @@
    * "mongodb": "^6.17.0",
    * "nodemon": "^3.1.10"
 ## how to use 
-# add in the .env
+### add in the .env
 *  DB_USER_NAME = mongodb database user name
 * DB_PASS = mongodb user password
 * FIREBASE_TYPE
