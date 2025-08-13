@@ -160,6 +160,10 @@ async function run() {
     });
 
     // bookMarkCollection
+    app.get("/booking",async(req,res)=>{
+      const result = await bookMarkCollection.find().toArray()
+      res.send(result)
+    })
     app.get("/myBooking", fBVerify, async (req, res) => {
       const email = req.query.email;
       const decodedEmail = req?.user;
