@@ -104,18 +104,18 @@ async function run() {
       const result = await athleticCollection.find(filter).toArray();
       res.send(result);
     });
-    app.get("/athletic/:id", fBVerify, async (req, res) => {
+    app.get("/athletic/:id",  async (req, res) => {
       const id = req.params.id;
 
       const filter = { _id: new ObjectId(id) };
       const result = await athleticCollection.findOne(filter);
-      // console.log(req.user, result);
-      if (!result) {
-        return res.status(404).send({ message: "Not found" });
-      }
-      if (!req.user) {
-        return res.status(403).send({ message: "Forbidden" });
-      }
+      // // console.log(req.user, result);
+      // if (!result) {
+      //   return res.status(404).send({ message: "Not found" });
+      // }
+      // if (!req.user) {
+      //   return res.status(403).send({ message: "Forbidden" });
+      // }
       res.send(result);
     });
     //   post
